@@ -4,9 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour{
+    public GameObject menu;
+    public GameObject deathScreen;
+
+    void Start() {
+        if (Player_Score.scoreValue == 0) {
+            menu.SetActive(true);
+            deathScreen.SetActive(false);
+        }
+    }
+
     public void PlayGame() {
         Player_Score.scoreValue = 0;
-        Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene("Level 01");
     }
 

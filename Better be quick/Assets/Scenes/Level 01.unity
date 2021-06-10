@@ -732,9 +732,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
+  - {fileID: 8467836585573373916, guid: cd07f83972f7754498d58c81965bca5b, type: 3}
   - {fileID: 8035075842644147751, guid: f07c5c5266bf4f0478a6924f16200efc, type: 3}
-  obstaclesToSpawn:
-  - {fileID: 0}
+  obstaclesToSpawn: []
 --- !u!4 &1274811652
 Transform:
   m_ObjectHideFlags: 0

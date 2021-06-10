@@ -7,9 +7,9 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     private ScoreData sd;
+
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
         var json = PlayerPrefs.GetString("scores", "{}");
         sd = JsonUtility.FromJson<ScoreData>(json);
     }
@@ -32,7 +32,6 @@ public class ScoreManager : MonoBehaviour
     public void SaveScore()
     {
         var json = JsonUtility.ToJson(sd);
-        Debug.Log(json);
         PlayerPrefs.SetString("scores", json);
     }
 }

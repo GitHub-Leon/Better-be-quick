@@ -348,6 +348,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 110296789}
   - {fileID: 123544274}
   - {fileID: 1929557358}
   - {fileID: 194419794}
@@ -518,12 +519,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110296788}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 194419794}
-  m_RootOrder: 3
+  m_Father: {fileID: 23441366}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -572,7 +573,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 23441366}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -647,9 +648,8 @@ RectTransform:
   - {fileID: 960461237}
   - {fileID: 1833881357}
   - {fileID: 1784588569}
-  - {fileID: 110296789}
   m_Father: {fileID: 23441366}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2201,7 +2201,7 @@ RectTransform:
   - {fileID: 939336445}
   - {fileID: 2035762974}
   m_Father: {fileID: 23441366}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2220,6 +2220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3fb22460563dc74da07489f64c58ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
+  deathScreen: {fileID: 0}
 --- !u!1 &1555127597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,6 +2497,7 @@ GameObject:
   - component: {fileID: 1715923722}
   - component: {fileID: 1715923721}
   - component: {fileID: 1715923724}
+  - component: {fileID: 1715923725}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -2581,6 +2584,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 110296791}
   inputField: {fileID: 2035762973}
+--- !u!114 &1715923725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715923720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3fb22460563dc74da07489f64c58ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1929557357}
+  deathScreen: {fileID: 1374039320}
 --- !u!1 &1733687574
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,7 +3352,7 @@ RectTransform:
   - {fileID: 1835950901}
   - {fileID: 2119533422}
   m_Father: {fileID: 23441366}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3354,6 +3371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3fb22460563dc74da07489f64c58ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
+  deathScreen: {fileID: 0}
 --- !u!1 &2035762973
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,13 +3474,13 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6809985721595315012, guid: 51d52c71d76fb5c4daf0fc43b09b45a1, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1715923724}
+        m_TargetAssemblyTypeName: ReadInput, Assembly-CSharp
+        m_MethodName: SaveScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3476,13 +3495,13 @@ MonoBehaviour:
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1715923724}
+        m_TargetAssemblyTypeName: ReadInput, Assembly-CSharp
+        m_MethodName: SaveScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
