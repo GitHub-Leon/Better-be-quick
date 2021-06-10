@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collector
+  - Lava
   layers:
   - Default
   - TransparentFX
