@@ -21,7 +21,7 @@ public class Obstacle_Spawner : MonoBehaviour
     void InitObstacles() {
         index = 0;
 
-        for (int i = 0; i < obstacles.Length; i++) {
+        for (int i = 0; i < obstacles.Length * 5; i++) {
             GameObject obj = Instantiate(obstacles[index], transform.position, Quaternion.identity);
             obstaclesToSpawn.Add(obj);
             obstaclesToSpawn[i].SetActive(false);
